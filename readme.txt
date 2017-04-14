@@ -41,9 +41,9 @@ This is a [known issue](https://github.com/srguglielmo/Content-Expiration/issues
 
 Expirations are processed hourly. Wait a bit, then check again.
 
-= Expired posts aren't listed on the *All Pages* screens! =
+= Expired posts aren't listed on the All Pages screens! =
 
-Expired content is not included in the *All* listing on the *All Pages* or *All Posts* pages. This is a (seven year old) [bug in WordPress](https://core.trac.wordpress.org/ticket/12706). Click the *Expired (x)* link to view the expired content.
+Expired content is not included in the *All* listings. This is a (seven year old) [bug in WordPress](https://core.trac.wordpress.org/ticket/12706). Click the *Expired (x)* link to view the expired content.
 
 = What's this MIT license? =
 
