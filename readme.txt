@@ -3,7 +3,6 @@ Contributors: srg-1
 Tags: expiration, posts, pages
 Requires at least: 4.6
 Tested up to: 4.7.3
-Stable tag: trunk
 License: MIT
 License URI: https://choosealicense.com/licenses/mit/
 
