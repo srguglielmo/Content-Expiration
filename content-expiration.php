@@ -2,10 +2,11 @@
 /*
 Plugin Name: Content Expiration
 Plugin URI: https://github.com/srguglielmo/Content-Expiration
-Description: Add an expiration date to posts or pages. Expired content is hidden, never deleted. Email notifications are sent to the author.
-Version: 1.0
-Author: Stephen Guglielmo
-Author URI: https://guglielmo.us/
+Description: Expirations for posts or pages. Expired content is hidden, never deleted. Email notifications are sent to the author.
+Version: 1.0.1
+Author: Steve Guglielmo
+License: MIT
+Please see the LICENSE file for more information.
 */
 
 defined('ABSPATH') or die ('No.');
@@ -275,5 +276,3 @@ class ContentExpiration {
 		wp_unschedule_event(wp_next_scheduled('content-expiration_' . get_current_blog_id()), 'content-expiration_' . get_current_blog_id());
 	}
 }
-
-?>

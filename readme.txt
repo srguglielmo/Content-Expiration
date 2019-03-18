@@ -2,7 +2,7 @@
 Contributors: srg-1
 Tags: expiration, posts, pages
 Requires at least: 4.6
-Tested up to: 4.7.3
+Tested up to: 5.0
 License: MIT
 License URI: https://choosealicense.com/licenses/mit/
 
@@ -18,7 +18,7 @@ When a post/page expires, it is **not** deleted. Instead, it is given a status o
 
 The expiration can be reset by any editor or administrator of the site. They must log in and edit the expiration settings of the post/page.
 
-**Content Expiration** is actively developed on GitHub. Please submit bugs reports and contributions on [the GitHub Project page](https://github.com/srguglielmo/Content-Expiration).
+**Content Expiration** is developed on GitHub. Please submit bugs reports and contributions on [the GitHub Project page](https://github.com/srguglielmo/Content-Expiration).
 
 For general support and questions, please use the [WordPress support forum](https://wordpress.org/support/plugin/content-expiration/).
 
@@ -61,6 +61,10 @@ See the `LICENSE` file for full details.
 5. The email notifying the author that their post will expire.
 
 == Changelog ==
+
+= 1.0.1 =
+* Compatibility with WordPress 5.0.
+* Minor documentation updates.
 
 = 1.0 =
 * Initial release.

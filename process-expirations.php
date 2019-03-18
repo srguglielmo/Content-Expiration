@@ -57,5 +57,3 @@ foreach ($Results as $Post) {
 		wp_update_post(array('ID' => $PostID, 'post_status' => 'expired'));
 	}
 }
-
-?>
