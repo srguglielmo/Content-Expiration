@@ -2,7 +2,7 @@
 Contributors: srg-1
 Tags: expiration, posts, pages
 Requires at least: 4.6
-Tested up to: 5.0
+Tested up to: 5.2
 License: MIT
 License URI: https://choosealicense.com/licenses/mit/
 
@@ -10,7 +10,7 @@ Content Expiration is a WordPress plugin to set an expiration date on posts or p
 
 == Description ==
 
-**Content Expiration** is a WordPress plugin that allows authors/editors to set an expiration date on posts or pages. The plugin is intended to be simple with easy-to-read code.
+**Content Expiration** is a WordPress plugin that allows authors/editors to set an expiration date on posts or pages.
 
 An expiration can be set by specifying a number of days (e.g., *expire in 90 days*) or a specific date/time (e.g., *May 10, 2018 at 10:00 PM*). Two weeks prior to the expiration date, the author of the post/page is sent a warning email. The author receives another notification email upon expiration.
 
@@ -30,13 +30,13 @@ Install the plugin as you do normally. Once activated, you will have a widget to
 
 = The timezone seem to be wrong! =
 
-This is a [known issue](https://github.com/srguglielmo/Content-Expiration/issues/2). The plugin is currently hardcoded to the `America/New_York` timezone. This will be fixed in the next release.
+This is a [known issue](https://github.com/srguglielmo/Content-Expiration/issues/2). The plugin is currently hardcoded to the `America/New_York` timezone.
 
 = Can I set an expiration on custom post types? =
 
 [Not yet](https://github.com/srguglielmo/Content-Expiration/issues/1).
 
-= The page has expired but it's still visible to the public! =
+= The page just expired but it's still visible to the public! =
 
 Expirations are processed hourly. Wait a bit, then check again.
 
@@ -61,6 +61,12 @@ See the `LICENSE` file for full details.
 5. The email notifying the author that their post will expire.
 
 == Changelog ==
+
+= 1.0.2 =
+* Compatibility with WordPress 5.2.
+* Improved compliance with WordPress coding standards.
+* Move PHP class into separate file.
+* Move expiration processing into main class.
 
 = 1.0.1 =
 * Compatibility with WordPress 5.0.

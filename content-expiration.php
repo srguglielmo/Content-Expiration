@@ -3,7 +3,7 @@
  * Plugin Name: Content Expiration
  * Plugin URI: https://wordpress.org/plugins/content-expiration/
  * Description: Expirations for posts or pages. Expired content is hidden, never deleted. Email notifications are sent to the author.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Steve Guglielmo
  * License: MIT
  *
