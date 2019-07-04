@@ -56,7 +56,7 @@ class Content_Expiration {
 			// Calculate the next hour plus 1 minute to ensure the cron job runs every min=1
 			// eg 1:01, 5:01, 12:01, etc
 			// This is to ensure that when the user sets the expiration by date, the post is deleted within a minute.
-			$next_hour_obj = new DateTime( '+1 hour', new DateTimeZone( 'America/New_York' ) );
+			$next_hour_obj = new DateTime( '+1 hour', new DateTimeZone( get_option( 'timezone_string' ) ) );
 			$next_hour     = $next_hour_obj->format( 'Y-m-d h:01:00 A T' );
 
 			wp_schedule_event(
@@ -281,7 +281,7 @@ class Content_Expiration {
 
 			// Calculate future date and update metadata.
 			try {
-				$date_time_obj = new DateTime( '+ ' . $_POST['expiration-days'] . ' days', new DateTimeZone( 'America/New_York' ) );
+				$date_time_obj = new DateTime( '+ ' . $_POST['expiration-days'] . ' days', new DateTimeZone( get_option( 'timzone_string' ) ) );
 			} catch ( Exception $e ) {
 				return $postid;
 			}
@@ -314,7 +314,7 @@ class Content_Expiration {
 
 			// Invalid input from the client (eg, month 13) throws an exception.
 			try {
-				$date_time_obj = new DateTime( $timestring, new DateTimeZone( 'America/New_York' ) );
+				$date_time_obj = new DateTime( $timestring, new DateTimeZone( get_option( 'timzone_string' ) ) );
 			} catch ( Exception $e ) {
 				return $postid;
 			}
@@ -369,8 +369,8 @@ class Content_Expiration {
 			if ( empty( $postexpired ) ) {
 				echo 'Never';
 			} else {
-				$exp = new DateTime( $postexpired, new DateTimeZone( 'America/New_York' ) );
-				$now = new DateTime( 'now', new DateTimeZone( 'America/New_York' ) );
+				$exp = new DateTime( $postexpired, new DateTimeZone( get_option( 'timzone_string' ) ) );
+				$now = new DateTime( 'now', new DateTimeZone( get_option( 'timzone_string' ) ) );
 				if ( $exp->getTimestamp() <= $now->getTimestamp() ) {
 					echo '<span style="font-weight: bold;">Expired</span>';
 				} else {
@@ -410,9 +410,9 @@ class Content_Expiration {
 			$post_title = $post->post_title;
 
 			// Check to see if we should send an email notification.
-			$future_obj = new DateTime( '+2 weeks', new DateTimeZone( 'America/New_York' ) );
+			$future_obj = new DateTime( '+2 weeks', new DateTimeZone( get_option( 'timzone_string' ) ) );
 			try {
-				$exp_date = new DateTime( $post->meta_value, new DateTimeZone( 'America/New_York' ) );
+				$exp_date = new DateTime( $post->meta_value, new DateTimeZone( get_option( 'timzone_string' ) ) );
 			} catch ( Exception $e ) {
 				continue; // Something went wrong. Skip this entry.
 			}
@@ -439,7 +439,7 @@ class Content_Expiration {
 			}
 
 			// Check to see if the date has passed. If so, unpublish.
-			$now = new DateTime( 'now', new DateTimeZone( 'America/New_York' ) );
+			$now = new DateTime( 'now', new DateTimeZone( get_option( 'timzone_string' ) ) );
 			if ( $exp_date->getTimestamp() <= $now->getTimestamp()
 				&& get_post_status( $post_id ) === 'publish'
 			) {

@@ -28,21 +28,21 @@ Install the plugin as you do normally. Once activated, you will have a widget to
 
 == Frequently Asked Questions ==
 
-= The timezone seem to be wrong! =
+= The timezone is wrong! =
 
-This is a [known issue](https://github.com/srguglielmo/Content-Expiration/issues/2). The plugin is currently hardcoded to the `America/New_York` timezone.
+Check the timezone option in your site settings. Note that prior to v1.1.0, the timezone was hardcoded to America/New_York and could not be changed.
 
 = Can I set an expiration on custom post types? =
 
-[Not yet](https://github.com/srguglielmo/Content-Expiration/issues/1).
+Expirations can only be set on the WordPress "post" or "page" content types. [See this issue](https://github.com/srguglielmo/Content-Expiration/issues/1).
 
-= The page just expired but it's still visible to the public! =
+= The page should have expired, but it's still published! =
 
-Expirations are processed hourly. Wait a bit, then check again.
+Expirations are processed hourly at 1 minute past. Wait a bit, then check again.
 
 = Expired posts aren't listed on the All Pages screens! =
 
-Expired content is not included in the *All* listings. This is a (seven year old) [bug in WordPress](https://core.trac.wordpress.org/ticket/12706). Click the *Expired (x)* link to view the expired content.
+Expired content is not included in the *All* listing. This is a (seven year old) [bug in WordPress](https://core.trac.wordpress.org/ticket/12706). Click the *Expired (x)* link to view the expired content.
 
 = What's this MIT license? =
 
@@ -61,6 +61,10 @@ See the `LICENSE` file for full details.
 5. The email notifying the author that their post will expire.
 
 == Changelog ==
+
+= 1.1.0 =
+* Respect the timezone configured in the site options.
+* Minor documentation updates.
 
 = 1.0.2 =
 * Compatibility with WordPress 5.2.
